@@ -4,61 +4,64 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class BaseUi extends CommonAction{
-	
-	private WebDriver driver;
-	public BaseUi(WebDriver driver) {
-		super(driver);
-		driver = this.driver;
-	}
-	
-	 protected String getPageTitle() {
-		 return driver.getTitle();
-	 }
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
-     protected WebElement activeElement() {
-    	 return driver.switchTo().activeElement();
-     }
+public class BaseUi extends CommonAction {
+
+    private WebDriver driver;
+
+    public BaseUi(WebDriver driver) {
+        super(driver);
+        driver = this.driver;
+    }
+
+    protected String getPageTitle() {
+        return driver.getTitle();
+    }
+
+    protected WebElement activeElement() {
+        return driver.switchTo().activeElement();
+    }
 
 
-     protected void reloadPage() {
-    	 driver.navigate().refresh();
-     }
+    protected void reloadPage() {
+        driver.navigate().refresh();
+    }
 
 
-     protected void scrollToElementAction(WebElement element)
-     {
-         Actions hoverClick = new Actions(driver);
-         hoverClick.moveToElement(element).build().perform();
-     }
+    protected void scrollToElementAction(WebElement element) {
+        Actions hoverClick = new Actions(driver);
+        hoverClick.moveToElement(element).build().perform();
+    }
 
-     protected void sendKeysUsingAction(WebElement element, String key)
-     {
-         Actions hoverClick = new Actions(driver);
-         hoverClick.moveToElement(element).sendKeys(key).build().perform();
-     }
+    protected void sendKeysUsingAction(WebElement element, String key) {
+        Actions hoverClick = new Actions(driver);
+        hoverClick.moveToElement(element).sendKeys(key).build().perform();
+    }
 
-     protected String getCurrentURL() {
-    	 return driver.getCurrentUrl().toString();
-     }
+    protected String getCurrentURL() {
+        return driver.getCurrentUrl().toString();
+    }
 
-     protected void switchToFrame(WebElement element) {
-    	 driver.switchTo().frame(element);
-     }
+    protected void switchToFrame(WebElement element) {
+        driver.switchTo().frame(element);
+    }
 
-     protected void switchToFrame(int i) {
-    	 driver.switchTo().frame(i);
-     }
+    protected void switchToFrame(int i) {
+        driver.switchTo().frame(i);
+    }
 
-     protected void switchToFrame(String id) {
-    	 driver.switchTo().frame(id);
-     }
+    protected void switchToFrame(String id) {
+        driver.switchTo().frame(id);
+    }
 
-     protected void switchToDefaultContent() {
-    	 driver.switchTo().defaultContent();
-     }
+    protected void switchToDefaultContent() {
+        driver.switchTo().defaultContent();
+    }
 
-//     default Object executeJavascript(String script)
+    //     default Object executeJavascript(String script)
 //     {
 //         try
 //         {
@@ -148,27 +151,28 @@ public class BaseUi extends CommonAction{
 //     }
 //
 //
-//     protected void SwitchToBrowerTab()
-//     {
-//         List<string> tab = new List<string>(driver.WindowHandles);
-//
-//         foreach (var item in tab)
-//             driver.SwitchTo().Window(item);
-//     }
-//
+    public void SwitchToBrowerTab() {
+        String currentHandle = this.driver.getWindowHandle();
+        Set<String> handles = this.driver.getWindowHandles();
+        for (String actual : handles) {
+            if (!actual.equalsIgnoreCase(currentHandle)) {
+                this.driver.switchTo().window(actual);
+            }
+        }
+    }
+
 //
 //     protected int GetNoOfOpenedTab() => new List<string>(driver.WindowHandles).Count;
-
-
-//     protected void SwitchToBrowerTab(int tabIndex)
-//     {
-//         List<String> tab = new List()<String>(driver.getWindowHandles());
-//         driver.switchTo().window(tab[tabIndex]);
+//
+//
+//     public void SwitchToBrowerTab(int tabIndex) throws InterruptedException {
+//         Thread.sleep(5000);
+//         ArrayList<String> tab = (ArrayList<String>) driver.getWindowHandles();
+//         driver.switchTo().window(tab.get(tabIndex));
 //     }
 
 
- //    protected void GoBackInBrowser() => driver.Navigate().Back();
-
+            //    protected void GoBackInBrowser() => driver.Navigate().Back();
 
 
 //     protected void closeCurrentTabInBrowser() {
@@ -179,7 +183,7 @@ public class BaseUi extends CommonAction{
 //     {
 //         SwitchToBrowerTab(tabNumber);
 //         closeCurrentTabInBrowser();
- //    }
- }
+            //    }
+        }
 
 

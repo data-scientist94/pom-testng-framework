@@ -91,7 +91,7 @@ public class WebDriverFactor {
 }
 
 	private static WebDriver getChromeDriver() {
-		System.setProperty("webdriver.chrome.driver", Get.SELENIUM_DRIVER_PATH + "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", Get.SELENIUM_DRIVER_PATH + "chromedriver");
 		if(Get.HEADLESS_BROWSER) {
 			ChromeOptions options = new ChromeOptions();
 	        options.addArguments("headless");

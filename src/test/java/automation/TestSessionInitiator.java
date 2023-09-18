@@ -8,7 +8,7 @@ import automation.utils.TakeScreenShot;
 
 public class TestSessionInitiator extends BaseClassFixture{
 	
-	private static WebDriver driver = WebDriverFactor.getDriver();
+	public static WebDriver driver = WebDriverFactor.getDriver();
 	public LoginAction login;
 	SeleniumWait wait;
 	TakeScreenShot takeScreenShot;
@@ -30,7 +30,7 @@ public class TestSessionInitiator extends BaseClassFixture{
 	private void LaunchWebSiteWithValidConfig() {
 		driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.get("https://www.google.com/");
+        driver.get("https://zebpay.com/in/");
 	}
 
 	private void InitActionCls() {

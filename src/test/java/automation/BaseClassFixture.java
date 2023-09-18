@@ -20,7 +20,6 @@ public class BaseClassFixture {
 		System.out.println("Initate Selenium Wait Class...");
 		System.out.println("Initate Take Screen Shot Class...");
 	}
-	
 
 	@AfterSuite
 	 void closeCurrentSession() {

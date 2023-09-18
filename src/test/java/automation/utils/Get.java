@@ -10,7 +10,7 @@ public interface Get {
 	static final String RESOURCE_FOLDER = "/src/test/resources/";
 	
 	/*** Operating system can be windows, unix-mac and linux (Default: WIN)*/
-	static final String OPERATING_SYSTEM = "windows/";
+	static final String OPERATING_SYSTEM = "unix-mac/";
 	
 	/*** TIER can be qa, stg, and prod (Default: QA)*/
 	static final String TIER = "qa";
