@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.clientname.project1.test.LoginTest">
+      <class name="test.automation.ollion.project.LoginTest">
         <methods>
           <include name="login_with_valid_credential"/>
         </methods>
-      </class> <!-- automation.clientname.project1.test.LoginTest -->
+      </class> <!-- test.automation.ollion.project.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

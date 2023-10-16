@@ -6,12 +6,12 @@
     <groups>
     </groups>
     <test started-at="2021-08-04T20:28:15 IST" name="Default test" finished-at="2021-08-04T20:28:16 IST" duration-ms="1249">
-      <class name="automation.clientname.project1.test.LoginTest">
-        <test-method signature="login_with_valid_credential()[pri:0, instance:automation.clientname.project1.test.LoginTest@18a3962d]" started-at="2021-08-04T20:28:15 IST" name="login_with_valid_credential" finished-at="2021-08-04T20:28:16 IST" duration-ms="1225" status="PASS">
+      <class name="test.automation.ollion.project.LoginTest">
+        <test-method signature="login_with_valid_credential()[pri:0, instance:test.automation.ollion.project.LoginTest@18a3962d]" started-at="2021-08-04T20:28:15 IST" name="login_with_valid_credential" finished-at="2021-08-04T20:28:16 IST" duration-ms="1225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_with_valid_credential -->
-      </class> <!-- automation.clientname.project1.test.LoginTest -->
+      </class> <!-- test.automation.ollion.project.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

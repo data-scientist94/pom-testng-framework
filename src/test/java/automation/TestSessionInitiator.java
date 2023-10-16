@@ -2,7 +2,7 @@ package automation;
 
 import org.openqa.selenium.WebDriver;
 
-import automation.clientname.project1.action.LoginAction;
+import automation.ollion.project.action.LoginAction;
 import automation.utils.SeleniumWait;
 import automation.utils.TakeScreenShot;
 
@@ -30,7 +30,7 @@ public class TestSessionInitiator extends BaseClassFixture{
 	private void LaunchWebSiteWithValidConfig() {
 		driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.get("https://zebpay.com/in/");
+        driver.get("https://stackoverflow.com/");
 	}
 
 	private void InitActionCls() {

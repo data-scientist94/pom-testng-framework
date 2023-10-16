@@ -24,11 +24,11 @@ public class GetPage extends BaseUi {
 		return driver.findElement(getLocator(element));
 	}
 
-	private By getLocator(String element, String replace) {
+	protected By getLocator(String element, String replace) {
 		return getBy(ReadSpecFile.toGetLocator(element)[1], ReadSpecFile.toGetLocator(element)[2].replaceAll("\\$\\{.+\\}", replace));
 	}
-	
-	private By getLocator(String element) {
+
+	protected By getLocator(String element) {
 		return getBy(ReadSpecFile.toGetLocator(element)[1], ReadSpecFile.toGetLocator(element)[2]);
 	}
 	
